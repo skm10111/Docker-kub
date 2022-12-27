@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: story-deployment
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels:
+      app: story
+  template: 
+    metadata: 
+      labels:
+        app: story
+    spec:
+      containers:
+        - name: story
+          image: skanonymous/kub-data-demo:1
+          volumeMounts: 
+            - mountPath: /app/story
+              name: story-volumes
+      volumes: 
+        - name: story-volumes
+          # emptyDir: {} 
+          # hostPath: 
+          #   path: /data
+          #   type: DirectoryOrCreate
+          persistentVolumeClaim: 
+            claimName: host-pvc
+            
