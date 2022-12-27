@@ -1,0 +1,62 @@
+-docker ps -a "for seeing all  container "
+-docker run image name  "it will  download if it's not available in local"
+-docker stop {container name} "stop the container"
+-docker run -it {name} "for expose the container"
+
+---------
+Dockerfile
+FROM node :- "speifing  the image"
+
+WORKDIR /app :- "workdirectry folder"
+
+COPY . /app :- "First .(for all) from  where , second for specific place"
+
+RUN npm install :- "installing  the packegs"
+
+EXPOSE 80 :- "for  specific port(for  documation)"
+
+CMD ["node", "server.js"] :- "for runing  the project"
+
+--------- 
+ 
+-Docker build . "for building the docker container"
+
+docker run  {image name}"for running  container"
+
+docker run -p 3000:80 {image name} "for running the container on speific port" 
+
+docker --help "for get all the cmd"
+docker -ps "for getting all ps realted command"
+docker start {container name} "for restating the continer"
+docker run -p 3000:80 -d {image name}  "for run container detached" 
+docker attach {conatiner name} "for attached the container "
+docker logs {conatiner name} "seeing  past log"
+docker start -a {conatiner name} "for restarting and attached"
+docker run -it {image name} "for interactive mode like Python"
+docker start -a -i {container  name} "start conatiner with  intreactive mode"
+docker rm {container  name} "remove container history "
+docker images "see all  the images "
+docker rmi "delete image"
+docker image prune "delete all images"
+docker run  -p 3000:80 -d --rm {conatiner name} " remove container when  it's  stop"
+docker image inspect {image name}
+docker cp {copy from ex: dummy/.(. for all copy)} {container name}:/ {to ex: /test} " for  copy data to container and get from  container 
+docker run -p 3000:80 -d --rm --name(for  nameing the container) {name} {image name}
+docker build -t(for tag) {name}:{tag}ex: test:1 .
+docker tag {old image name}:tagname {new name}:tagname(optional) "for reanaming image
+docker push {reponame} "for pushing image to  hub "
+docker pull {reponame} "for pulling image to hub "
+docker push  skanonymous/kub-first-app:{tag} 2 :- for pushing the image on docker hub
+
+
+Volume:-
+VOLUME ["/app/feedback"] :- add this in dockerfile for store data image
+docker volume ls :- for list all volumes 
+-v name:path ex(feedback:/app/feedback) :- add in run time for  adding store volume
+
+
+
+
+
+
+

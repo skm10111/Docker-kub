@@ -1,0 +1,21 @@
+minikube start --drive=docker :- for assigning the drive
+minikube start :- for start the minikube server 
+minikube status :- for checking server status
+minikube dashboard :- for checking dashboard
+kubectl create deployment first-app --image=skanonymous/kub-first-app
+kubectl expose deployment first-app --type=LoadBalancer --port=8080 :- for exposing the service 
+kubectl get pods :- for  getting all the pods
+kubectl get deploy:- for getting all deploy 
+kubectl get service:- get all service
+minikube service first-app :- for deployment pods in service
+kubectl scale deployment/first-app --replicas=3 :- for scaleing and createing replicas of pods
+kubectl set image deployment/first-app kub-first-app=skanonymous/kub-first-app :- for updating uploaded image
+kubectl rollout status deployment/first-app:- for checking the deployment status
+kubectl rollout undo deployment/first-app:- for deploy last deployment
+kubectl rollout history deployment/first-app  :- for checking the deployment history
+kubectl rollout history deployment/first-app --revision=2 :- for checking number 2 history
+kubectl rollout undo deployment/first-app --to-revision=3 :- for setting up any specific vesrion 
+kubectl delete service first-app :- for deleteing the service
+kubectl delete deployment first-app :- for deleteing the deployment
+kubectl apply -f= deployment.yaml :- for create deploy from deployment file
+kubectl apply -f service.yaml :- for create service from service file 
