@@ -17,5 +17,7 @@ kubectl rollout history deployment/first-app --revision=2 :- for checking number
 kubectl rollout undo deployment/first-app --to-revision=3 :- for setting up any specific vesrion 
 kubectl delete service first-app :- for deleteing the service
 kubectl delete deployment first-app :- for deleteing the deployment
-kubectl apply -f= deployment.yaml :- for create deploy from deployment file
+kubectl apply -f=deployment.yaml :- for create deploy from deployment file
 kubectl apply -f service.yaml :- for create service from service file 
+kubectl delete -f=deployment.yaml, -f=service.yaml :- for delete deployment from  file 
+kubectl delete deployment, services -l group=example:- for delete using labels 
