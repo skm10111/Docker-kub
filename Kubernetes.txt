@@ -21,3 +21,7 @@ kubectl apply -f=deployment.yaml :- for create deploy from deployment file
 kubectl apply -f service.yaml :- for create service from service file 
 kubectl delete -f=deployment.yaml, -f=service.yaml :- for delete deployment from  file 
 kubectl delete deployment, services -l group=example:- for delete using labels 
+kubectl get sc :- for getting storage class name
+kubectl get pv :-for getting persistent volume
+kubectl get pvc :- for find the claims 
+kubectl get configmap :-  for find the configmap
