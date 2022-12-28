@@ -1,0 +1,24 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata: 
+  name: users-deployment
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: users
+  template: 
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers:
+        - name: users 
+          image: skanonymous/kub-demo-users:latest
+          env:
+            - name: AUTH_ADDRESS
+              # value: "10.96.81.120"
+              value: "auth-service.default"
+       # for two containers in one pod 
+        # - name: auth
+        #   image: skanonymous/kub-demo-auth:latest
