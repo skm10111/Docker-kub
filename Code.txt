@@ -56,3 +56,7 @@ docker volume ls :- for list all volumes
 
 docker-compose up -d --build :- for creating docker image
 docker-compose down :- for close the conatiner
+docker volume --help :- for getting all command realted to  volume
+docker volume create feedback-files :- for creating volume
+docker volume rm  feedback-files :- for deleting the volume
+docker volume prune :- for remove all the unused volume
