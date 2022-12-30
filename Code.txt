@@ -62,3 +62,12 @@ docker volume rm  feedback-files :- for deleting the volume
 docker volume prune :- for remove all the unused volume
 //networking 
 docker container inspect mongodb: - for inspecting the container
+docker run -d --name mongodb --network favorites-net mongo :- for connecting to network
+docker network create favorites-net :- for creating the network
+docker network ls :- for all seeing all the network
+note:- for consume the network container has to be in  same network
+docker images :- for the seeing all the images
+docker run --name mongodb -v data:/data/db --rm -d --network goals-net mongo :- for adding volume  for mongodb
+ docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=test -e MONGO_INITDB_ROOT_PASSWORD=TEST mongo :- for adding authentication  in mongo environment 
+ docker run --name goals-backend -v G:/saurabh/DOCKER/Project/Docker-Kub/docker/multi-01-starting-setup/backend:/app  -v 
+logs:/app/logs -v /app/node_modules  -d  --rm -p 80:80 --network goals-net node-goals :- for adding volume and volume mount 
