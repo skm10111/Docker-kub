@@ -1,7 +1,7 @@
--docker ps -a "for seeing all  conatiner "
+-docker ps -a "for seeing all  container "
 -docker run image name  "it will  download if it's not available in local"
--docker stop {conatiner name} "stop the conatiner"
--docker run -it {name} "for expose the conatiner"
+-docker stop {container name} "stop the container"
+-docker run -it {name} "for expose the container"
 
 ---------
 Dockerfile
@@ -19,29 +19,29 @@ CMD ["node", "server.js"] :- "for runing  the project"
 
 --------- 
  
--Docker build . "for building the docker conatiner"
+-Docker build . "for building the docker container"
 
-docker run  {image name}"for running  conatiner"
+docker run  {image name}"for running  container"
 
-docker run -p 3000:80 {image name} "for running the conatiner on speific port" 
+docker run -p 3000:80 {image name} "for running the container on speific port" 
 
 docker --help "for get all the cmd"
 docker -ps "for getting all ps realted command"
-docker start {conatiner name} "for restating the continer"
-docker run -p 3000:80 -d {image name}  "for run conatiner detached" 
-docker attach {conatiner name} "for attached the conatiner "
-docker logs {conatiner name} "seeing  past log"
-docker start -a {conatiner name} "for restarting and attached"
+docker start {container name} "for restating the container"
+docker run -p 3000:80 -d {image name}  "for run container detached" 
+docker attach {container name} "for attached the container "
+docker logs {container name} "seeing  past log"
+docker start -a {container name} "for restarting and attached"
 docker run -it {image name} "for interactive mode like Python"
-docker start -a -i {conatiner  name} "start conatiner with  intreactive mode"
-docker rm {conatiner  name} "remove conatiner history "
+docker start -a -i {container  name} "start container with  intreactive mode"
+docker rm {container  name} "remove container history "
 docker images "see all  the images "
 docker rmi "delete image"
 docker image prune "delete all images"
-docker run  -p 3000:80 -d --rm {conatiner name} " remove conatiner when  it's  stop"
+docker run  -p 3000:80 -d --rm {container name} " remove container when  it's  stop"
 docker image inspect {image name}
-docker cp {copy from ex: dummy/.(. for all copy)} {conatiner name}:/ {to ex: /test} " for  copy data to conatiner and get from  conatiner 
-docker run -p 3000:80 -d --rm --name(for  nameing the conatiner) {name} {image name}
+docker cp {copy from ex: dummy/.(. for all copy)} {container name}:/ {to ex: /test} " for  copy data to container and get from  container 
+docker run -p 3000:80 -d --rm --name(for  nameing the container) {name} {image name}
 docker build -t(for tag) {name}:{tag}ex: test:1 .
 docker tag {old image name}:tagname {new name}:tagname(optional) "for reanaming image
 docker push {reponame} "for pushing image to  hub "
@@ -55,8 +55,10 @@ docker volume ls :- for list all volumes
 -v name:path ex(feedback:/app/feedback) :- add in run time for  adding store volume
 
 docker-compose up -d --build :- for creating docker image
-docker-compose down :- for close the conatiner
+docker-compose down :- for close the container
 docker volume --help :- for getting all command realted to  volume
 docker volume create feedback-files :- for creating volume
 docker volume rm  feedback-files :- for deleting the volume
 docker volume prune :- for remove all the unused volume
+//networking 
+docker container inspect mongodb: - for inspecting the container
