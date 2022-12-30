@@ -54,7 +54,7 @@ VOLUME ["/app/feedback"] :- add this in dockerfile for store data image
 docker volume ls :- for list all volumes 
 -v name:path ex(feedback:/app/feedback) :- add in run time for  adding store volume
 
-docker-compose up -d --build :- for creating docker image
+docker-compose up -d --build :- for creating docker image (note : add build if you want to build)
 docker-compose down :- for close the container
 docker volume --help :- for getting all command realted to  volume
 docker volume create feedback-files :- for creating volume
@@ -68,5 +68,4 @@ docker network ls :- for all seeing all the network
 note:- for consume the network container has to be in  same network
 docker images :- for the seeing all the images
 docker run --name mongodb -v data:/data/db --rm -d --network goals-net mongo :- for adding volume  for mongodb
- docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=test -e MONGO_INITDB_ROOT_PASSWORD=TEST mongo :- for adding authentication  in mongo environment 
-docker-compose up -d :- for runing docker compose
+docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=test -e MONGO_INITDB_ROOT_PASSWORD=TEST mongo :- for adding authentication  in mongo environment 
