@@ -21,9 +21,9 @@ CMD ["node", "server.js"] :- "for runing  the project"
  
 -Docker build . "for building the docker container"
 
-docker run  {image name}"for running  container"
+docker run  {image name}"for runing  container"
 
-docker run -p 3000:80 {image name} "for running the container on speific port" 
+docker run -p 3000:80 {image name} "for runing the container on speific port" 
 
 docker --help "for get all the cmd"
 docker -ps "for getting all ps realted command"
@@ -69,5 +69,4 @@ note:- for consume the network container has to be in  same network
 docker images :- for the seeing all the images
 docker run --name mongodb -v data:/data/db --rm -d --network goals-net mongo :- for adding volume  for mongodb
  docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=test -e MONGO_INITDB_ROOT_PASSWORD=TEST mongo :- for adding authentication  in mongo environment 
- docker run --name goals-backend -v G:/saurabh/DOCKER/Project/Docker-Kub/docker/multi-01-starting-setup/backend:/app  -v 
-logs:/app/logs -v /app/node_modules  -d  --rm -p 80:80 --network goals-net node-goals :- for adding volume and volume mount 
+docker-compose up -d :- for runing docker compose
