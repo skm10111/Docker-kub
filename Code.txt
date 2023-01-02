@@ -74,3 +74,4 @@ docker run -it -v G:/saurabh/DOCKER/Project/Docker-Kub/docker/Utility:/app mynpm
 docker-compose run npm init :- use for consume utility container
 docker-compose up {service name} 
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel . :- for create laravel project
+docker-compose run --rm artisan migrate
