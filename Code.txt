@@ -69,4 +69,6 @@ note:- for consume the network container has to be in  same network
 docker images :- for the seeing all the images
 docker run --name mongodb -v data:/data/db --rm -d --network goals-net mongo :- for adding volume  for mongodb
 docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=test -e MONGO_INITDB_ROOT_PASSWORD=TEST mongo :- for adding authentication  in mongo environment
-docker run -it -v {project path}:/app node-utill{image name} npm init{any command who use node}
+docker run -it -v {project path}:/app node-utill{image name} npm init{any command who use node}:- for use utility
+docker run -it -v G:/saurabh/DOCKER/Project/Docker-Kub/docker/Utility:/app mynpm  install 
+docker-compose run npm init :- use for consume utility container
