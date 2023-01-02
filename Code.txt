@@ -72,3 +72,5 @@ docker run --name  mongodb -v data:/data/db --rm -d --network goals-net -e MONGO
 docker run -it -v {project path}:/app node-utill{image name} npm init{any command who use node}:- for use utility
 docker run -it -v G:/saurabh/DOCKER/Project/Docker-Kub/docker/Utility:/app mynpm  install 
 docker-compose run npm init :- use for consume utility container
+docker-compose up {service name} 
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel . :- for create laravel project
